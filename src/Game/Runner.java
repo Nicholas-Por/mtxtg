@@ -37,7 +37,14 @@ public class Runner {
 		int x1 = (int)(Math.random()*building.length);
 		int y1 = (int)(Math.random()*building.length);
 		building[x][y] = new MineRoom(x, y);
-
+		// add mine room
+		int x2 = (int)(Math.random()*building.length);
+		int y2 = (int)(Math.random()*building.length);
+		building[x][y] = new MineRoom(x, y);
+		// add mine room
+		int x3 = (int)(Math.random()*building.length);
+		int y3 = (int)(Math.random()*building.length);
+		building[x][y] = new MineRoom(x, y);
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
 		building[0][0].enterRoom(player1);
