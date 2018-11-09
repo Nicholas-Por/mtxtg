@@ -3,7 +3,8 @@ package Game;
 import People.Person;
 import Rooms.Room;
 import Rooms.WinningRoom;
-
+import Rooms.MineRoom;
+import Rooms.Rock;
 import java.util.Scanner;
 
 public class Runner {
@@ -21,14 +22,22 @@ public class Runner {
 			for (int y = 0; y < building[x].length; y++)
 			{
 				building[x][y] = new Room(x,y);
+
 			}
 		}
-		
+
+
+
+
 		//Create a random winning room.
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
-		 
+		// add mine room
+		int x1 = (int)(Math.random()*building.length);
+		int y1 = (int)(Math.random()*building.length);
+		building[x][y] = new MineRoom(x, y);
+
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
 		building[0][0].enterRoom(player1);
